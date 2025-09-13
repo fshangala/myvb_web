@@ -3,4 +3,5 @@
 @theme {
   --color-primary: rgb(100,100,255);
   --color-on-primary: rgb(255,255,255);
+  --color-surface: rgb(230,230,230);
 }
