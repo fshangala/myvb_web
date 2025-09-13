@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Django",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\manage.py",
+      "args": [
+        "runserver"
+      ],
+      "django": true
+    },
+    {
+      "name": "Tailwind Watch",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "tailwind-watch"], // Assumes you have a "tailwind-watch" script in package.json
+      "console": "integratedTerminal",
+      "preLaunchTask": "Tailwind Watch" // Reference the task from tasks.json
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Django & Tailwind",
+      "configurations": ["Django", "Tailwind Watch"],
+      "stopAll": true
+    }
+  ]
+}
